@@ -36,9 +36,9 @@ def turn(board)
   puts "Please enter 1-9:"
   user_input = gets.strip
   index = input_to_index(user_input)
-  if valid_move?(array, index) == true && position_taken?(array, index) == false
-    move(array, index, char = 'X')
-  else valid_move?(array, index) == false || position_taken?(array, index) == true
+  if valid_move?(board, index) == true && position_taken?(board, index) == false
+    move(board, index, char = 'X')
+  else valid_move?(board, index) == false || position_taken?(board, index) == true
     puts "Please enter a valid number, or the number for an unoccupied space"
     turn(board)
   end
