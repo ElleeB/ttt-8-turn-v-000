@@ -30,6 +30,7 @@ end
 
 def move(array, index, char = 'X')
   array[index] = char
+  display(board)
 end
 
 def turn(board)
@@ -37,7 +38,7 @@ def turn(board)
   user_input = gets.strip
   index = input_to_index(user_input)
   if valid_move?(board, index) == true && position_taken?(board, index) == false
-    display_board(board) = move(board, index, char = 'X')
+    move(board, index, char = 'X')
   else valid_move?(board, index) == false || position_taken?(board, index) == true
     puts "Please enter a valid number, or the number for an unoccupied space"
     turn(board)
