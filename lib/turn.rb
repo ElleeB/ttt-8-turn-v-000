@@ -30,7 +30,6 @@ end
 
 def move(array, index, char = 'X')
   array[index] = char
-  display(board)
 end
 
 def turn(board)
